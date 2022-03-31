@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h1>RECEITAS</h1>
+      <a [routerLink]="['/adicionarreceita']"
+        ><button class="btn btn-danger">ADICIONAR</button></a
+      >
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>NOME</th>
+            <th>Categoria</th>
+            <th>VALOR</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            *ngFor="let lancamento of lancamento; index as x"
+            class="text-center"
+          >
+            <td>{{ lancamento.id }}</td>
+            <td>{{ lancamento.nome }}</td>
+            <td>{{ lancamento.categoria }}</td>
+            <td>{{ lancamento.valor }}</td>
+            <td>
+              <button (click)="update(lancamento)" class="btn btn-warning">
+                Editar
+              </button>
+              <button (click)="delete(lancamento)" class="btn btn-danger">
+                Deletar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

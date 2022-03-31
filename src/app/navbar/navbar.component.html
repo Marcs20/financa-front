@@ -1,0 +1,20 @@
+<div>
+  <ul>
+    <li>
+      <a [routerLink]="['/']"><button class="btn-home">HOME</button></a>
+    </li>
+    <li>
+      <a [routerLink]="['/mostrar']"
+        ><button class="btn-desp">DESPESAS</button></a
+      >
+    </li>
+    <li>
+      <a [routerLink]="['/mostrarreceita']">
+        <button class="btn-orc">RECEITAS</button>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<br /><br />
+<div class="saldo">SALDO: {{ getRes() }}</div>

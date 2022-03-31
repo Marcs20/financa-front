@@ -1,0 +1,47 @@
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h1>Editar</h1>
+    </div>
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <label for=""> Nome: </label>
+          <input
+            [(ngModel)]="lancamento.nome"
+            name="nome"
+            type="text"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <label> Categoria: </label>
+          <select
+            [(ngModel)]="lancamento.categoria"
+            name="categoria"
+            class="form-control"
+          >
+            <option value="Alimentação">Alimentação</option>
+            <option value="Esporte">Esporte</option>
+            <option value="Educação">Educação</option>
+            <option value="Ferramentas">Ferramentas</option>
+            <option value="Vestimenta">Vestimenta</option>
+            <option value="Transporte">Transporte</option>
+            <option value="Outros">Outros</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for=""> Valor: </label>
+          <input
+            [(ngModel)]="lancamento.valor"
+            name="valor"
+            type="text"
+            class="form-control"
+          />
+        </div>
+        <hr />
+        <button (click)="update()" class="btn btn-danger">Atualizar</button>
+      </form>
+    </div>
+  </div>
+</div>
